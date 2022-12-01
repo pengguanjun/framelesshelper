@@ -22,7 +22,7 @@
   SOFTWARE.
 ]]
 
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.18)
 
 project(FramelessHelper
     VERSION 2.3.5.0
@@ -162,7 +162,8 @@ else()
 endif()
 # /whatever/Qt/6.4.0/gcc_64/lib/cmake/Qt6
 set(__qt_inst_dir ${__qt_inst_dir}/../../..)
-cmake_path(NORMAL_PATH __qt_inst_dir)
+#cmake_path(NORMAL_PATH __qt_inst_dir)
+set(NORMAL_PATH __qt_inst_dir)
 message("Qt install dir: ${__qt_inst_dir}")
 message("Qt version: ${QT_VERSION}")
 # TODO: output shared/static Qt.
